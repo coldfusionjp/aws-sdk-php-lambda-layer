@@ -1,0 +1,13 @@
+stages:
+  - build
+
+build:
+  stage: build
+  only:
+    - master
+  script:
+    - make
+  image: registry.gitlab.com/coldfusionjp/gitlab-ci:latest
+  tags:
+    - linux-runner
+
